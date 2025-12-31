@@ -2,7 +2,7 @@
 
 ---
 
-🗣️ O Que é Isso, IA? Exploração Divertida 🌍
+🗣️ O Que é Isso IA? Exploração Divertida 🌍
 =================================================
 
 Este projeto é uma plataforma educativa interativa que utiliza Inteligência Artificial e Visão Computacional para transformar o ambiente ao redor em uma sala de aula de idiomas. O app permite identificar objetos, resolver fórmulas matemáticas e praticar a pronúncia em diversos idiomas de forma segura e divertida.
