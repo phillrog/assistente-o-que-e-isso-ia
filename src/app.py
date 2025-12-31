@@ -1,5 +1,6 @@
 import streamlit as st
 import os
+from pathlib import Path
 import base64
 from PIL import Image
 import json
@@ -22,22 +23,15 @@ if 'reset_counter' not in st.session_state:
     st.session_state['reset_counter'] = 0
 
 def carregar_estilo():
-    caminho_css = os.path.join("assets", "style.css")
-    if os.path.exists(caminho_css):
+    caminho_css = Path(__file__).parent / "assets" / "style.css"
+    
+    if caminho_css.exists():
         with open(caminho_css, "r") as f:
             st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
-    
-    # Mantendo suas animações CSS originais que podem não estar no arquivo externo
-    st.markdown("""
-    <style>
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .magic-card { animation: fadeIn 0.8s ease-out; }
-    </style>
-    """, unsafe_allow_html=True)
-
+    else:
+        st.warning(f"Aviso: Arquivo de estilo não encontrado em {caminho_css}")
+        
+st.set_page_config(page_title="O que é isso IA ?", layout="wide")
 carregar_estilo()
 
 # ==========================================
@@ -105,12 +99,10 @@ with st.sidebar:
 # ==========================================
 st.markdown(f"""
 <div class="header-container">
-    <div class="main-title">
-        <img src="https://cdn-icons-png.flaticon.com/512/3468/3468094.png" style="width: 50px; vertical-align: middle;"> 
-        O que é isso IA ?
-    </div>
+    <div class="main-title"><img src="https://cdn-icons-png.flaticon.com/512/3468/3468094.png" alt="0" style="width: 64px; max-width: 100%;"> O que é isso IA ?</div>
     <div style="color: #718096; font-size: 18px;">Exploração Multilíngue com Inteligência Artificial 🌍</div>
 </div>
+
 """, unsafe_allow_html=True)
 
 # ==========================================
