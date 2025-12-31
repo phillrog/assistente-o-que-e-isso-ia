@@ -126,8 +126,16 @@ Obs: Cuidado com os limites
 Esta é uma ferramenta baseada em Inteligência Artificial Experimental. As análises fornecidas são sugestões educativas. O processamento de dados segue rigorosos filtros de privacidade locais, mas recomenda-se que o usuário valide todas as informações e consulte as políticas de privacidade do provedor (Google Gemini).
 
 # Resultado
+Teste com upload
 
 ![assistente-exp-1](https://github.com/user-attachments/assets/2b0b8c49-3425-44f0-8c65-f91bcd7f43a0)
 
+
+![assistente-exp-2](https://github.com/user-attachments/assets/0bcda7da-8ae4-4bca-9a2c-a65f24b23054)
+
+
+Teste com a câmera
+
+https://github.com/user-attachments/assets/f3f629cb-d3b8-440c-bf6f-9741b7b22b46
 
 
