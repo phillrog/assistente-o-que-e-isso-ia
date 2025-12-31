@@ -62,6 +62,7 @@ LABELS_SABIA = {"pt-br": "Você sabia?", "en": "Did you know?", "es": "¿Sabías
 # 3. SIDEBAR (CONFIGURAÇÕES)
 # ==========================================
 with st.sidebar:
+        
     st.image("https://cdn-icons-png.flaticon.com/512/3468/3468094.png", width=80)
     st.title("Configurações")
     
@@ -91,6 +92,14 @@ with st.sidebar:
         
     st.markdown("---")
     st.caption('Para Sarinha')
+
+    with st.expander("⚠️ Disclaimer e Privacidade"):
+        st.caption("""
+            Esta é uma ferramenta baseada em IA Experimental. 
+            As análises são sugestões educativas. 
+            A detecção de privacidade é feita localmente antes do envio ao Google Gemini. 
+            Valide sempre as informações fornecidas.
+        """)
 
 # ==========================================
 # 4. CABEÇALHO
@@ -229,3 +238,5 @@ else:
         <p style="font-size: 18px; color: #718096;">Escolha um idioma e insira a sua API Key para começar.</p>
     </div>
     """, unsafe_allow_html=True)
+
+    

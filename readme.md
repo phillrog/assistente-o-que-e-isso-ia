@@ -122,6 +122,9 @@ A aplicação utiliza o modelo **Gemini 2.0 Flash** e **Gemini 3 Flash (Preview)
 Obs: Cuidado com os limites
 
 
+# ⚠️ Disclaimer (Aviso de Uso)
+Esta é uma ferramenta baseada em Inteligência Artificial Experimental. As análises fornecidas são sugestões educativas. O processamento de dados segue rigorosos filtros de privacidade locais, mas recomenda-se que o usuário valide todas as informações e consulte as políticas de privacidade do provedor (Google Gemini).
+
 # Resultado
 
 ![assistente-exp-1](https://github.com/user-attachments/assets/2b0b8c49-3425-44f0-8c65-f91bcd7f43a0)
