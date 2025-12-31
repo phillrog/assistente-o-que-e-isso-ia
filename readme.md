@@ -7,6 +7,9 @@
 
 Este projeto é uma plataforma educativa interativa que utiliza Inteligência Artificial e Visão Computacional para transformar o ambiente ao redor em uma sala de aula de idiomas. O app permite identificar objetos, resolver fórmulas matemáticas e praticar a pronúncia em diversos idiomas de forma segura e divertida.
 
+<img width="1918" height="981" alt="image" src="https://github.com/user-attachments/assets/eaef12c6-5f93-4c02-8970-ae1fb5c32f8c" />
+
+
 🚀 O Propósito e Fluxo de Operação
 ----------------------------------
 
@@ -117,4 +120,11 @@ A aplicação utiliza o modelo **Gemini 2.0 Flash** e **Gemini 3 Flash (Preview)
 
 5.  Copie a chave gerada e cole-a no campo correspondente na barra lateral da aplicação.
 Obs: Cuidado com os limites
+
+
+# Resultado
+
+![assistente-exp-1](https://github.com/user-attachments/assets/2b0b8c49-3425-44f0-8c65-f91bcd7f43a0)
+
+
 
