@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit_js_eval import streamlit_js_eval
+from streamlit_back_camera_input import back_camera_input
 import os
 from pathlib import Path
 import base64
@@ -84,19 +84,6 @@ with st.sidebar:
     
     metodo_entrada = st.radio("Entrada:", ("📁 Arquivo", "📷 Câmera"))   
 
-    if metodo_entrada == "📷 Câmera":
-        if st.button("🔄 Forçar Câmera Traseira"):
-            # Este JS tenta forçar o navegador a priorizar a câmera traseira
-            streamlit_js_eval(js_expressions='''
-                navigator.mediaDevices.getUserMedia({ 
-                    video: { facingMode: { exact: "environment" } } 
-                }).then(stream => {
-                    window.location.reload();
-                }).catch(err => {
-                    alert("Não foi possível acessar a câmera traseira diretamente. Tente o modo 'Arquivo'.");
-                })
-            ''', key="switch_cam")
-            
     # RESET COMPLETO E SEGURO
     if st.button("🗑️ Limpar Sessão", type="secondary"):
         proximo_reset = st.session_state.get('reset_counter', 0) + 1
@@ -138,7 +125,7 @@ if api_key:
     if metodo_entrada == "📁 Arquivo":
         arquivo_imagem = st.file_uploader("Subir foto", type=["jpg", "png", "jpeg"], key=f"up_{versao}")
     else:
-        arquivo_imagem = st.camera_input("Tirar foto", key=f"cam_{versao}")
+        arquivo_imagem = st.back_camera_input("Tirar foto (Câmera Traseira)", key=f"cam_{versao}")
     
     if arquivo_imagem:
         id_foto = f"{getattr(arquivo_imagem, 'name', str(arquivo_imagem.size))}_{lang_code}_{versao}"
