@@ -8,20 +8,26 @@ class YoloService:
         self.caminho_modelo = caminho_modelo
         self.url_download = url_download
         self._assegurar_modelo()
-        self.model = YOLO(self.caminho_modelo)
+        try:
+            self.model_yolo_face = YOLO(self.caminho_modelo)
+        except Exception as e:
+            print(f"Erro ao carregar o modelo YOLO: {e}")
+            self.model_yolo_face = None
         
     def _assegurar_modelo(self):
-        if not os.path.exists(self.caminho_modelo) and self.url_download:
-            diretorio = os.path.dirname(self.caminho_modelo)
-            if not os.path.exists(diretorio):
-                os.makedirs(diretorio)
-            
-            if not os.path.exists(self.caminho_modelo):
-                # SE NÃO EXISTE: Faz o download (isso só acontece na PRIMEIRA vez)
+        # Verifica se o arquivo físico existe no disco
+        if not os.path.exists(self.caminho_modelo):
+            if self.url_download:
+                diretorio = os.path.dirname(self.caminho_modelo)
+                if diretorio and not os.path.exists(diretorio):
+                    os.makedirs(diretorio, exist_ok=True)
+                
+                # O download acontece aqui
+                print(f"Iniciando download do modelo para: {self.caminho_modelo}")
                 urllib.request.urlretrieve(self.url_download, self.caminho_modelo)
+                print("Download concluído!")
             else:
-                # SE JÁ EXISTE: O Python ignora o download e segue em frente
-                pass
+                print("Erro: Arquivo não existe e nenhuma URL de download foi fornecida.")
             
 
     def validar_privacidade(self, imagem_pil):

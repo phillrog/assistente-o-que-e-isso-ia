@@ -42,10 +42,8 @@ def iniciar_servico_visao():
     url = "https://github.com/lindevs/yolov8-face/releases/download/1.0.1/yolov8x-face-lindevs.pt"
     diretorio_base = os.path.dirname(os.path.abspath(__file__))
     caminho_modelo = os.path.join(diretorio_base, 'pre-trained-models', 'yolo', 'yolov8x-face-lindevs.pt')
-    
-    if os.path.exists(caminho_modelo):
-        return YoloService(caminho_modelo)
-    return None
+
+    return YoloService(caminho_modelo, url_download=url)
 
 yolo_service = iniciar_servico_visao()
 
