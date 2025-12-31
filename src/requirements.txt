@@ -5,3 +5,4 @@ pillow
 ultralytics
 numpy
 gTTS
+opencv-python-headless

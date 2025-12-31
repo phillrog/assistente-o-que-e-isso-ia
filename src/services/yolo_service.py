@@ -16,7 +16,13 @@ class YoloService:
             if not os.path.exists(diretorio):
                 os.makedirs(diretorio)
             
-            urllib.request.urlretrieve(self.url_download, self.caminho_modelo)
+            if not os.path.exists(caminho_modelo):
+                # SE NÃO EXISTE: Faz o download (isso só acontece na PRIMEIRA vez)
+                urllib.request.urlretrieve(self.url_download, self.caminho_modelo)
+            else:
+                # SE JÁ EXISTE: O Python ignora o download e segue em frente
+                pass
+            
 
     def validar_privacidade(self, imagem_pil):
         if self.model_yolo_face is None: 
