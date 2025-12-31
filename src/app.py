@@ -125,6 +125,7 @@ if api_key:
     if metodo_entrada == "📁 Arquivo":
         arquivo_imagem = st.file_uploader("Subir foto", type=["jpg", "png", "jpeg"], key=f"up_{versao}")
     else:
+        st.markdown("<h3 style='text-align: center;'>📸 Toque no vídeo para analisar</h3>", unsafe_allow_html=True)
         arquivo_imagem = back_camera_input("Tirar foto (Câmera Traseira)", key=f"cam_{versao}")
     
     if arquivo_imagem:
