@@ -16,7 +16,7 @@ class YoloService:
             if not os.path.exists(diretorio):
                 os.makedirs(diretorio)
             
-            if not os.path.exists(caminho_modelo):
+            if not os.path.exists(self.caminho_modelo):
                 # SE NÃO EXISTE: Faz o download (isso só acontece na PRIMEIRA vez)
                 urllib.request.urlretrieve(self.url_download, self.caminho_modelo)
             else:
