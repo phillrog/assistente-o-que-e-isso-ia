@@ -128,7 +128,12 @@ if api_key:
         arquivo_imagem = back_camera_input("Tirar foto (Câmera Traseira)", key=f"cam_{versao}")
     
     if arquivo_imagem:
-        id_foto = f"{getattr(arquivo_imagem, 'name', str(arquivo_imagem.size))}_{lang_code}_{versao}"
+        try:
+            nome_ou_tamanho = getattr(arquivo_imagem, 'name', str(getattr(arquivo_imagem, 'size', id(arquivo_imagem))))
+        except:
+            nome_ou_tamanho = "camera_captura"
+
+        id_foto = f"{nome_ou_tamanho}_{lang_code}_{versao}"
         
         if st.session_state.get('id_foto_anterior') != id_foto:
             st.session_state.update({
