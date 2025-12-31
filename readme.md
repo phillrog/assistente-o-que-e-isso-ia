@@ -1,4 +1,4 @@
-🗣️ O Que é Isso, IA? --- Exploração Multilíngue 🌍
+🗣️ O Que é Isso, IA? Exploração Divertida 🌍
 =================================================
 
 Este projeto é uma plataforma educativa interativa que utiliza Inteligência Artificial e Visão Computacional para transformar o ambiente ao redor em uma sala de aula de idiomas. O app permite identificar objetos, resolver fórmulas matemáticas e praticar a pronúncia em diversos idiomas de forma segura e divertida.
@@ -19,7 +19,7 @@ O diferencial deste aplicativo é o seu fluxo de processamento inteligente divid
 
 -   **[Streamlit](https://streamlit.io/):** Interface de usuário responsiva e dinâmica.
 
--   **[YOLOv8](https://github.com/lindevs/yolov8-face/releases:** Validação de privacidade local com o modelo especializado `yolov8x-face-lindevs.pt`.
+-   **[YOLOv8](https://github.com/lindevs/yolov8-face/releases):** Validação de privacidade local com o modelo especializado `yolov8x-face-lindevs.pt`.
 
 -   **[Google Gemini (via LangChain)](https://ai.google.dev/):** Análise multimodal de imagens e geração de conteúdo educativo.
 
@@ -58,6 +58,7 @@ Plaintext
 ├── assets/               # CSS personalizado e animações
 └── pre-trained-models/   # Modelos YOLO para detecção local
 
+Obs: O modelo deve ser baixado automaticamente ao iniciar a aplicação pois não é possível armazenar um arquivo tão grande neste respositório.
 ```
 
 * * * * *
