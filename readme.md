@@ -1,3 +1,7 @@
+[![Build - Assistente O Que é Isso IA ?](https://github.com/phillrog/assistente-o-que-e-isso-ia/actions/workflows/build-conda.yml/badge.svg)](https://github.com/phillrog/assistente-o-que-e-isso-ia/actions/workflows/build-conda.yml)  - [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://assistente-exploracao-divertida.streamlit.app)
+
+---
+
 🗣️ O Que é Isso, IA? Exploração Divertida 🌍
 =================================================
 
@@ -63,6 +67,7 @@ Obs: O modelo deve ser baixado automaticamente ao iniciar a aplicação pois nã
 
 * * * * *
 
+## Como rodar o projeto
 
 ### 1. Criar o Ambiente Virtual
 Isso garante que as bibliotecas do projeto não conflitem com outras no seu computador.
@@ -112,3 +117,4 @@ A aplicação utiliza o modelo **Gemini 2.0 Flash** e **Gemini 3 Flash (Preview)
 
 5.  Copie a chave gerada e cole-a no campo correspondente na barra lateral da aplicação.
 Obs: Cuidado com os limites
+
