@@ -106,7 +106,7 @@ with st.sidebar:
 # 4. CABEÇALHO
 # ==========================================
 st.markdown(f"""
-<div class="header-container">
+<div class="header-container mobile-shrink">
     <div class="main-title"><img src="https://cdn-icons-png.flaticon.com/512/3468/3468094.png" alt="0" style="width: 64px; max-width: 100%;"> O que é isso IA ?</div>
     <div style="color: #718096; font-size: 18px;">Exploração Multilíngue com Inteligência Artificial 🌍</div>
 </div>
@@ -129,11 +129,17 @@ if api_key:
     
     if arquivo_imagem:
         try:
-            nome_ou_tamanho = getattr(arquivo_imagem, 'name', str(getattr(arquivo_imagem, 'size', id(arquivo_imagem))))
+            if hasattr(arquivo_imagem, 'name'):
+                identificador = arquivo_imagem.name
+            elif hasattr(arquivo_imagem, 'getvalue'):
+                # Se for BytesIO (como o back_camera), usamos o tamanho dos bytes
+                identificador = len(arquivo_imagem.getvalue())
+            else:
+                identificador = "captura_camera"
         except:
-            nome_ou_tamanho = "camera_captura"
+            identificador = "temp"
 
-        id_foto = f"{nome_ou_tamanho}_{lang_code}_{versao}"
+        id_foto = f"{identificador}_{lang_code}_{versao}"
         
         if st.session_state.get('id_foto_anterior') != id_foto:
             st.session_state.update({

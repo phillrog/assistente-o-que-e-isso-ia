@@ -24,3 +24,35 @@
     border-radius: 30px;
     border: 2px solid #E2E8F0;
 }
+
+/*Botão take shot*/
+
+/* Garante que o container da câmera caiba na tela do celular */
+[data-testid="stCameraInput"] {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Ajuste específico para o botão de captura em dispositivos móveis */
+[data-testid="stCameraInput"] button {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    z-index: 99;
+}
+
+/* Remove margens excessivas que "empurram" o conteúdo para baixo */
+.main .block-container {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
+
+.stCameraInput {
+    min-height: 400px !important;
+}
+
+/* Força o botão a ser visível mesmo em telas pequenas */
+div[data-testid="stCameraInput"] button {
+    display: block !important;
+    margin: 10px auto !important;
+}
