@@ -1,0 +1,20 @@
+# Ambiente Virtual (O mais importante para ignorar!)
+.venv/
+venv/
+**/.venv/
+src/.venv
+# Arquivos temporários do Python (Compilados)
+__pycache__/
+*.py[cod]
+**/__pycache__/
+
+# Configurações de IDE (VS Code, PyCharm)
+.vscode/
+.idea/
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Arquivos de configuração sensíveis (Onde você guardaria sua API Key)
+.env
