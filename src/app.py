@@ -125,7 +125,7 @@ if api_key:
     if metodo_entrada == "📁 Arquivo":
         arquivo_imagem = st.file_uploader("Subir foto", type=["jpg", "png", "jpeg"], key=f"up_{versao}")
     else:
-        arquivo_imagem = st.back_camera_input("Tirar foto (Câmera Traseira)", key=f"cam_{versao}")
+        arquivo_imagem = back_camera_input("Tirar foto (Câmera Traseira)", key=f"cam_{versao}")
     
     if arquivo_imagem:
         id_foto = f"{getattr(arquivo_imagem, 'name', str(arquivo_imagem.size))}_{lang_code}_{versao}"
